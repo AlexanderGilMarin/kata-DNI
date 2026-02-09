@@ -12,3 +12,6 @@ class Dni:
     
     def getLetraSana(self):
         return self.letraSana
+    
+    def setDni(self, cadena):
+        self.dni = cadena

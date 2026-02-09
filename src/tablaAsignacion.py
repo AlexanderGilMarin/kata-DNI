@@ -48,3 +48,4 @@ class TablaAsignacion:
         posicion = int(numero_dni) % self.getModulo()
         return self.getLetra(posicion)
     
+

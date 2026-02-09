@@ -35,7 +35,7 @@ def test_getTabla(tabla):
         "E",
     ]
 
-    def test_getLetra(tabla):
-        assert tabla.getLetra(0) == "T"
-        assert tabla.getLetra(22) == "E"
-        assert tabla.getLetra(30) == "Posicion letra fuera de rango"
+def test_getLetra(tabla):
+    assert tabla.getLetra(0) == "T"
+    assert tabla.getLetra(22) == "E"
+    assert tabla.getLetra(30) == "Posicion letra fuera de rango"

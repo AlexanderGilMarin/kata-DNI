@@ -28,3 +28,9 @@ class TablaAsignacion:
 
     def getTabla(self):
         return self.tabla
+
+    def getLetra(self, letra):
+        try:
+            return self.tabla[letra]
+        except IndexError:
+            return "Posicion letra fuera de rango"

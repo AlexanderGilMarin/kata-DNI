@@ -44,3 +44,6 @@ def test_getLetra(tabla):
 def test_getModulo(tabla):
     assert tabla.getModulo() == 23
     
+def test_isLetraPermitida(tabla):
+    assert tabla.isLetraPermitida("T")
+    assert not tabla.isLetraPermitida("I")

@@ -1,5 +1,6 @@
 import pytest
 from src.tablaAsignacion import TablaAsignacion
+from test.dni_correctos import CASOS_TEST_CORRECTOS
 
 
 @pytest.fixture(name="tabla")
@@ -35,6 +36,7 @@ def test_getTabla(tabla):
         "E",
     ]
 
+
 def test_getLetra(tabla):
     assert tabla.getLetra(0) == "T"
     assert tabla.getLetra(22) == "E"
@@ -43,7 +45,15 @@ def test_getLetra(tabla):
 
 def test_getModulo(tabla):
     assert tabla.getModulo() == 23
-    
+
+
 def test_isLetraPermitida(tabla):
     assert tabla.isLetraPermitida("T")
     assert not tabla.isLetraPermitida("I")
+
+
+@pytest.mark.parametrize("dni", CASOS_TEST_CORRECTOS)
+def test_calcularLetra_correcta(tabla, dni):
+    numero_dni = dni[:-1]
+    letra = dni[-1]
+    assert tabla.calcularLetra(numero_dni) == letra

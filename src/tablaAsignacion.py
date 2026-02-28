@@ -1,3 +1,8 @@
+import pytest
+
+from test.dni_incorrecto import CASOS_TEST_LETRA_PROHIBIDA
+
+
 class TablaAsignacion:
     def __init__(self):
         self.tabla = [
@@ -48,4 +53,5 @@ class TablaAsignacion:
         posicion = int(numero_dni) % self.getModulo()
         return self.getLetra(posicion)
     
+
 
